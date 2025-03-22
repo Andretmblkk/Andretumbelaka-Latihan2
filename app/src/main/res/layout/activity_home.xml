@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/apollo"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#001F3F"
+        android:alpha="0.9"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/nasa2" />
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Penjelajah Antariksa"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center_vertical" />
+
+        <View
+            android:id="@+id/spacer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profil2"
+            android:padding="4dp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- Area Konten -->
+    <ScrollView
+        android:id="@+id/content_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar"
+        android:layout_above="@+id/bottom_navigation"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Bagian Selamat Datang -->
+            <LinearLayout
+                android:id="@+id/welcome_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#001F3F"
+                android:padding="16dp"
+                android:alpha="0.9"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/welcome_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selamat Datang, Astronot!"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/welcome_subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jelajahi alam semesta dengan aplikasi Penjelajah Antariksa."
+                    android:textColor="#CCCCCC"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/latest_missions_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Misi Terbaru"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:id="@+id/moon_mission_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#001F3F"
+                android:padding="12dp"
+                android:alpha="0.9"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/moon_mission_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/satelit"
+                    android:scaleType="centerCrop"
+                    android:background="#0D47A1" />
+
+                <LinearLayout
+                    android:id="@+id/moon_mission_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/moon_mission_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Misi Bulan"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/moon_mission_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Eksplorasi permukaan bulan dengan rover terbaru"
+                        android:textColor="#CCCCCC"
+                        android:layout_marginTop="4dp" />
+
+                    <Button
+                        android:id="@+id/detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:text="Lihat Detail"
+                        android:textSize="12sp"
+                        android:backgroundTint="#1E88E5"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mars_mission_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#001F3F"
+                android:padding="12dp"
+                android:alpha="0.9"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/mars_mission_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/apollo"
+                    android:scaleType="centerCrop"
+                    android:background="#0D47A1" />
+
+                <LinearLayout
+                    android:id="@+id/mars_mission_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/mars_mission_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Misi Mars"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/mars_mission_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pencarian air dan tanda kehidupan di Mars"
+                        android:textColor="#CCCCCC"
+                        android:layout_marginTop="4dp" />
+
+                    <Button
+                        android:id="@+id/detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:text="Lihat Detail"
+                        android:textSize="12sp"
+                        android:backgroundTint="#1E88E5"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/upcoming_events_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acara Mendatang"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Kartu Acara -->
+            <LinearLayout
+                android:id="@+id/rocket_launch_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#001F3F"
+                android:padding="16dp"
+                android:alpha="0.9">
+
+                <TextView
+                    android:id="@+id/rocket_launch_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Peluncuran Roket"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/rocket_launch_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="23 Maret 2025 - 14:30 WIB"
+                    android:textColor="#00B0FF"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/rocket_launch_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saksikan peluncuran roket Space Explorer 9 secara langsung melalui aplikasi ini."
+                    android:textColor="#CCCCCC"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/calendar_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tambahkan ke Kalender"
+                    android:backgroundTint="#1E88E5"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <!-- Bagian Konten Edukasi -->
+            <TextView
+                android:id="@+id/educational_content_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Konten Pendidikan"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Grid Artikel -->
+            <GridLayout
+                android:id="@+id/education_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false">
+
+                <!-- Education content items would go here -->
+
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Added bottom navigation that was referenced but missing -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#001F3F"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true">
+
+
+    </LinearLayout>
+</RelativeLayout>
