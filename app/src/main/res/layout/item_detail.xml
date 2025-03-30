@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:background="@drawable/nasa2"> <!-- Background tema NASA diterapkan -->
 
         <!-- ImageView untuk menampilkan gambar -->
         <ImageView
@@ -30,7 +31,8 @@
             android:layout_marginTop="8dp"
             android:text="Judul Item"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#090909" />
 
         <!-- Teks Deskripsi -->
         <TextView
@@ -39,6 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Deskripsi singkat dari item."
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textColor="#0B0B0B" />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
