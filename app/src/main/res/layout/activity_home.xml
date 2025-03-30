@@ -154,11 +154,11 @@
                         android:layout_marginTop="4dp" />
 
                     <Button
-                        android:id="@+id/detail"
+                        android:id="@+id/button1"
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
-                        android:text="Lihat Detail"
-                        android:textSize="12sp"
+                        android:text="Lihat link"
+                        android:textSize="10sp"
                         android:backgroundTint="#1E88E5"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
@@ -207,11 +207,11 @@
                         android:layout_marginTop="4dp" />
 
                     <Button
-                        android:id="@+id/detail"
+                        android:id="@+id/button2"
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
                         android:text="Lihat Detail"
-                        android:textSize="12sp"
+                        android:textSize="10sp"
                         android:backgroundTint="#1E88E5"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
@@ -272,19 +272,7 @@
                     android:layout_marginTop="12dp" />
             </LinearLayout>
 
-            <!-- Bagian Konten Edukasi -->
-            <TextView
-                android:id="@+id/educational_content_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Konten Pendidikan"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp" />
-
-            <!-- Grid Artikel -->
+                   <!-- Grid Artikel -->
             <GridLayout
                 android:id="@+id/education_grid"
                 android:layout_width="match_parent"
