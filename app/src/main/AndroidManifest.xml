@@ -14,7 +14,7 @@
             android:name=".detail"
             android:exported="false" />
 
-        <activity android:name=".DetailActivity"
+        <activity android:name=".detail"
             android:exported="false" />
 
 
