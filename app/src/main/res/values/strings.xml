@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Halamanlogin</string>
+    <string name="navigation_drawer_open">Buka Menu</string>
+    <string name="navigation_drawer_close">Tutup Menu</string>
+
 </resources>

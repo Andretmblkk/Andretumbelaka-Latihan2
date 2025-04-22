@@ -55,7 +55,7 @@ class detail : AppCompatActivity() {
             )
         )
 
-        // Pasang Adapter ke RecyclerView
+
         recyclerView.adapter = DetailAdapter(detailList)
     }
 }
