@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -36,17 +37,40 @@ android {
 }
 
 dependencies {
+    // AndroidX Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-
-    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    // UI Components
+    implementation("androidx.recyclerview:recyclerview:1.3.2") // Update ke versi terbaru
     implementation("androidx.cardview:cardview:1.0.0")
 
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0")) // Gunakan BOM untuk versi terbaru
+    implementation(libs.firebase.auth) // Bisa dihapus jika menggunakan BOM
+    implementation("com.google.firebase:firebase-auth-ktx") // Tidak perlu versi jika pakai BOM
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+
+    // Firebase UI Auth (Opsional)
+    implementation("com.firebaseui:firebase-ui-auth:8.0.2")
+
+    // Coroutines untuk operasi async
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3") // Untuk coroutines dengan Firebase
+
+    // Lifecycle components
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation("androidx.test:rules:1.5.0")
+
+
+    debugImplementation("androidx.fragment:fragment-testing:1.6.2")
 }

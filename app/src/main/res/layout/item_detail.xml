@@ -6,20 +6,21 @@
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="8dp"
     card_view:cardElevation="4dp"
-    android:layout_margin="8dp">
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:background="@drawable/nasa2"> <!-- Background tema NASA diterapkan -->
+        android:padding="12dp"
+        android:background="@drawable/nasa2">
 
-        <!-- ImageView untuk menampilkan gambar -->
+        <!-- ImageView dengan tinggi yang lebih reasonable -->
         <ImageView
             android:id="@+id/ivItem"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:scaleType="centerCrop"
             android:src="@drawable/gambar7" />
 
@@ -30,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Judul Item"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#090909" />
 
@@ -41,8 +42,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Deskripsi singkat dari item."
-            android:textSize="14sp"
-            android:textColor="#0B0B0B" />
+            android:textSize="12sp"
+            android:textColor="#0B0B0B"
+            android:maxLines="2"
+            android:ellipsize="end" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
