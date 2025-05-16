@@ -1,7 +1,7 @@
 plugins {
-    alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.google.gms.google.services)
+    id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -43,13 +43,15 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
     // UI Components
     implementation("androidx.recyclerview:recyclerview:1.3.2") // Update ke versi terbaru
     implementation("androidx.cardview:cardview:1.0.0")
 
     // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0")) // Gunakan BOM untuk versi terbaru
+    // Gunakan BOM untuk versi terbaru
     implementation(libs.firebase.auth) // Bisa dihapus jika menggunakan BOM
     implementation("com.google.firebase:firebase-auth-ktx") // Tidak perlu versi jika pakai BOM
     implementation("com.google.android.gms:play-services-auth:20.7.0")

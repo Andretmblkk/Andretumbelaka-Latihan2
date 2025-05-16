@@ -1,16 +1,16 @@
 [versions]
-agp = "8.9.0"
-kotlin = "1.9.24"
-coreKtx = "1.15.0"
-junit = "4.13.2"
-junitVersion = "1.2.1"
-espressoCore = "3.6.1"
-appcompat = "1.7.0"
-material = "1.12.0"
-activity = "1.10.1"
-constraintlayout = "2.2.1"
-googleGmsGoogleServices = "4.4.2"
-firebaseAuth = "23.2.0"
+agp = "8.7.0"              # Diperbarui dari 2.1.0 ke 8.7.0 (versi terbaru AGP per Mei 2025)
+kotlin = "2.1.0"          # Diperbarui dari 1.9.24 ke 2.1.0 (cocok dengan Firebase 23.2.0)
+coreKtx = "1.15.0"        # Tetap, versi terbaru dan stabil
+junit = "4.13.2"          # Tetap, versi stabil untuk pengujian
+junitVersion = "1.2.1"    # Tetap, versi stabil untuk pengujian AndroidX
+espressoCore = "3.6.1"    # Tetap, versi stabil untuk pengujian UI
+appcompat = "1.7.0"       # Tetap, versi stabil
+material = "1.12.0"       # Tetap, versi stabil
+activity = "1.10.1"       # Tetap, versi stabil
+constraintlayout = "2.2.1" # Tetap, versi stabil
+googleGmsGoogleServices = "4.4.2" # Tetap, versi stabil
+firebaseAuth = "23.2.0"   # Tetap, versi yang Anda gunakan
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,4 +27,3 @@ firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
-

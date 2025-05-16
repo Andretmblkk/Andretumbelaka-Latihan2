@@ -15,16 +15,21 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var drawerLayout: DrawerLayout
-    private lateinit var menuIcon: ImageView // Deklarasikan ImageView untuk ikon menu
+    private lateinit var menuIcon: ImageView
+    private lateinit var auth: FirebaseAuth // Tambahkan FirebaseAuth untuk logout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_home)
+
+        // Inisialisasi Firebase Auth
+        auth = FirebaseAuth.getInstance()
 
         val rootView = findViewById<View>(R.id.home)
         ViewCompat.setOnApplyWindowInsetsListener(rootView) { v, insets ->
@@ -45,7 +50,6 @@ class home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
-
         menuIcon = findViewById(R.id.menu_icon)
 
         // Tambahkan toggle (ikon hamburger)
@@ -59,7 +63,6 @@ class home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-
         menuIcon.setOnClickListener {
             if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                 drawerLayout.closeDrawer(GravityCompat.START)
@@ -70,14 +73,12 @@ class home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     }
 
     private fun setupButtonActions() {
-
         val button1 = findViewById<Button>(R.id.button1)
         button1.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("https://www.nasa.gov/missions/nasa-space-techs-favorite-place-to-travel-in-2025-the-moon/")
             startActivity(intent)
         }
-
 
         val button2 = findViewById<Button>(R.id.button2)
         button2.setOnClickListener {
@@ -97,10 +98,14 @@ class home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
                 startActivity(intent)
             }
             R.id.logout -> {
-                // Logout dan kembali ke halaman Login
+                // Logout dari Firebase
+                auth.signOut()
+
+                // Bersihkan stack navigasi dan kembali ke MainActivity
                 val intent = Intent(this, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
-                finish() // Tutup activity saat ini untuk mencegah kembali
+                finish()
             }
         }
 

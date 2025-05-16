@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "730152620567",
-    "project_id": "nasaapp-9e46a",
-    "storage_bucket": "nasaapp-9e46a.firebasestorage.app"
+    "project_number": "39732354607",
+    "project_id": "nasa-777ec",
+    "storage_bucket": "nasa-777ec.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:730152620567:android:9d6a8111721b3dcb1e8252",
+        "mobilesdk_app_id": "1:39732354607:android:e61a05b466aa605201b0da",
         "android_client_info": {
           "package_name": "com.example.Nasa"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBKLgcKDb6lCjZwh0McqwusiXh5pE0XIro"
+          "current_key": "AIzaSyBJApqwRVr4QO6kANCHaHjc9KgwgjeGAJ4"
         }
       ],
       "services": {
